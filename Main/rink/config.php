@@ -25,6 +25,7 @@ const TRANSMITTERS = [
     "Apple TV" => "7",
     "Cable Box 1" => "2",
     "Cable Box 2" => "3",
+    "Cable Box 3" => "4",
     "Unifi Signage" => "5",
     "RockBot Audio" => "1",
     "Rink Spare Audio" =>  "6",
