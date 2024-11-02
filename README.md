@@ -179,15 +179,3 @@ Here’s a breakdown of the primary files and their roles within the project:
 
 ---
 
-## Contributing
-
-We welcome contributions to improve the Castle AV Controls project! To contribute:
-
-1. Fork the repository.
-2. Create a new feature branch.
-3. Make your changes and test thoroughly.
-4. Submit a pull request with a detailed description of the changes.
-
----
-
-This `README.md` provides a comprehensive overview of the Castle AV Controls project, including setup, usage, and configuration details. For further assistance or customization, please contact the
