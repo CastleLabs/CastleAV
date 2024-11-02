@@ -1,0 +1,16 @@
+Rink Video RX = 192.168.8.13
+Bar TV Left = 192.168.8.12
+Bar Tv Right = 192.168.8.20
+Axe Throw Left = 192.168.8.17
+Axe Throw Right = 192.168.8.21
+Dining Area TV = 192.168.8.70
+Bowling Bar TV 1 = 192.168.8.60
+Bowling Bar TV 2 = 192.168.8.61
+Bowling Bar TV 3 = 192.168.8.62
+Bowling Bar TV 4 = 192.168.8.63
+NeoVerse 1 = 192.168.8.50
+NeoVerse 2 = 192.168.8.51
+NeoVerse 3 = 192.168.8.52
+NeoVerse 4 = 192.168.8.53
+NeoVerse 5 = 192.168.8.54
+NeoVerse 6 = 192.168.8.55

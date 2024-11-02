@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesters AV Controls</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .header {
+            background: linear-gradient(to right, #7c3aed, #4f46e5);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .logo-title-group {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .home-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .home-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        .power-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        .power-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        .logo-container {
+            margin: 0;
+        }
+        h1 {
+            margin: 0;
+            color: white;
+        }
+        body {
+            padding: 20px;
+        }
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="header">
+            <div class="logo-title-group">
+                <div class="logo-container">
+                    <img src="logo.png" alt="Castle AV Controls Logo" class="logo">
+                </div>
+                <h1>Jesters Bar AV Controls</h1>
+            </div>
+            <div class="header-buttons">
+                <a href="<?php echo HOME_URL; ?>" class="home-button">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                    </svg>
+                    Home
+                </a>
+                <button id="power-all-on" class="power-button">Power All On</button>
+                <button id="power-all-off" class="power-button">Power All Off</button>
+            </div>
+        </div>
+
+        <div id="response-message"></div>
+        <div class="receivers-wrapper">
+            <?php echo generateReceiverForms(); ?>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

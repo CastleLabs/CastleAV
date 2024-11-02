@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Control V8</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="castle-tv-transmitter-remote-control">Remote Control V8</h1>
+        
+        <div id="transmitter-select">
+            Select Transmitter: Loading transmitters...
+        </div>
+        
+        <div class="remote-container">
+            <div class="button-row">
+                <button onclick="sendCommand('power')">Power</button>
+                <button onclick="sendCommand('guide')">Guide</button>
+            </div>
+            
+            <div class="navigation-pad">
+                <button onclick="sendCommand('up')">▲</button>
+                <div class="nav-row">
+                    <button onclick="sendCommand('left')">◀</button>
+                    <button onclick="sendCommand('select')">OK</button>
+                    <button onclick="sendCommand('right')">▶</button>
+                </div>
+                <button onclick="sendCommand('down')">▼</button>
+            </div>
+            
+            <div class="button-row">
+                <button onclick="sendCommand('channel_up')">CH +</button>
+                <button onclick="sendCommand('channel_down')">CH -</button>
+            </div>
+            
+            <div class="number-pad">
+                <button onclick="sendCommand('1')">1</button>
+                <button onclick="sendCommand('2')">2</button>
+                <button onclick="sendCommand('3')">3</button>
+                <button onclick="sendCommand('4')">4</button>
+                <button onclick="sendCommand('5')">5</button>
+                <button onclick="sendCommand('6')">6</button>
+                <button onclick="sendCommand('7')">7</button>
+                <button onclick="sendCommand('8')">8</button>
+                <button onclick="sendCommand('9')">9</button>
+                <button onclick="sendCommand('last')">Last</button>
+                <button onclick="sendCommand('0')">0</button>
+                <button onclick="sendCommand('exit')">Exit</button>
+            </div>
+            
+            <!-- New Home button -->
+            <div class="home-button-container">
+                <a href="http://192.168.8.127" class="home-button">Home</a>
+            </div>
+        </div>
+        
+        <div id="error-message" class="error-message">
+            <strong>Error!</strong> <span id="error-text"></span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

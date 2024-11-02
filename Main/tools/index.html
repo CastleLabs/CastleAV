@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustOS API Tools Hub</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --bg-primary: #1a1a2e;
+            --bg-secondary: #16213e;
+            --text-primary: #e2e8f0;
+            --text-secondary: #00ffff;
+            --accent: #ff61d2;
+            --border: #4a3f69;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            background-image: linear-gradient(45deg, var(--bg-primary) 25%, var(--bg-secondary) 25%, var(--bg-secondary) 50%, var(--bg-primary) 50%, var(--bg-primary) 75%, var(--bg-secondary) 75%, var(--bg-secondary) 100%);
+            background-size: 56.57px 56.57px;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--accent);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent), 0 0 15px var(--accent), 0 0 20px var(--accent);
+        }
+        
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .tool-card {
+            background-color: rgba(26, 26, 46, 0.8);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(255, 97, 210, 0.2);
+        }
+        
+        .tool-card h2 {
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .tool-card p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tool-card a {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--bg-primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .tool-card a:hover {
+            background-color: #ff00ff;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tool-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Castle AV Control Tools</h1>
+
+        <div class="tool-grid">
+
+           
+            <div class="tool-card">
+                <h2>API Test Interface</h2>
+                <p>Interface for testing various API endpoints. Not all endpoint work on all devices, see response.</p>
+                <a href="jap.php">Open Tool</a>
+            </div>
+
+            <div class="tool-card">
+                <h2>API Endpoints Table</h2>
+                <p>View a detailed table of all available API endpoints, methods, and descriptions.</p>
+                <a href="japapi.html">Open Tool</a>
+            </div>
+           
+          
+       
+        </div>
+    </div>
+</body>
+</html>

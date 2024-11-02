@@ -1,0 +1,287 @@
+/* AV Controls for Just Add Power Receivers Styles */
+
+/* Define color variables for easy theming and consistency */
+:root {
+    --bg-color: #121212;        /* Dark background for main content */
+    --text-color: #e0e0e0;      /* Light text color for readability on dark background */
+    --primary-color: #bb86fc;   /* Purple accent color for primary elements */
+    --secondary-color: #03dac6; /* Teal accent color for secondary elements */
+    --surface-color: #1e1e1e;   /* Slightly lighter background for cards/surfaces */
+    --error-color: #cf6679;     /* Red color for error messages and warnings */
+}
+
+/* Base body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header Section Styling */
+.header {
+    text-align: center; /* Centers child elements horizontally */
+    padding: 20px 0;    /* Adds vertical spacing within the header */
+    background-color: var(--surface-color); /* Optional: Adds a subtle background color */
+}
+
+/* Logo container styles */
+.logo-container {
+    text-align: center;
+    margin-bottom: 10px; /* Reduced margin to bring title closer */
+}
+
+/* Logo image styles */
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Page Title Styling */
+.header h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin: 20px 0; /* Adjusted margin to space between logo and title */
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Home Button Styling */
+.home-button {
+    display: inline-block; /* Allows horizontal alignment within the centered header */
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Space between title and button */
+}
+
+/* Hover effect for Home Button */
+.home-button:hover {
+    background-color: #cf96fc;
+}
+
+/* Grid container for receiver cards */
+.receivers-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual receiver card styles */
+.receiver {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for receiver cards */
+.receiver:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Form layout within receiver cards */
+.receiver form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* General button styles */
+button {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #04ebd2;
+}
+
+/* Receiver title styles */
+.receiver-title {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: default;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Styles for select dropdowns and range inputs */
+.receiver select, .receiver input[type='range'] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Custom styling for select dropdowns */
+.receiver select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23bb86fc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    padding-right: 40px;
+}
+
+/* Styles for slider labels */
+.receiver .slider-label {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Custom styling for range input (slider) */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #333;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+/* Hover effect for range input */
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+/* Styling for range input thumb (slider handle) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* Styles for warning messages */
+.warning {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+/* Styles for the response message container */
+#response-message {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: none;
+}
+
+/* Success state for response message */
+#response-message.success {
+    border: 2px solid var(--secondary-color);
+}
+
+/* Error state for response message */
+#response-message.error {
+    border: 2px solid var(--error-color);
+}
+
+/* Styles for receiver error state */
+.receiver.error {
+    border: 2px solid var(--error-color);
+    padding: 15px;
+}
+
+.receiver .error-message {
+    color: var(--error-color);
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Styles for global error message */
+.global-error {
+    background-color: var(--error-color);
+    color: var(--bg-color);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Styles for the main content area */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .receiver {
+        padding: 15px;
+    }
+
+    .home-button {
+        width: 80%;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    .header {
+        padding: 15px 0; /* Adjust header padding for smaller screens */
+    }
+
+    .home-button {
+        padding: 10px 20px; /* Adjust button padding for smaller screens */
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,421 @@
+/* AV Controls for Just Add Power receivers Styles */
+
+/* Define color variables for easy theming and consistency */
+:root {
+    --bg-color: #121212;       /* Dark background for main content */
+    --text-color: #e0e0e0;     /* Light text color for readability on dark background */
+    --primary-color: #bb86fc;  /* Purple accent color for primary elements */
+    --secondary-color: #03dac6; /* Teal accent color for secondary elements */
+    --surface-color: #1e1e1e;  /* Slightly lighter background for cards/surfaces */
+    --error-color: #cf6679;    /* Red color for error messages and warnings */
+}
+
+/* Base body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Logo container styles */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Logo image styles */
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Main heading styles */
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Grid container for receiver cards */
+.receivers-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual receiver card styles */
+.receiver {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for receiver cards */
+.receiver:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Form layout within receiver cards */
+.receiver form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* General button styles */
+button {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #04ebd2;
+}
+
+/* Receiver title styles */
+.receiver-title {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: default;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Styles for select dropdowns and range inputs */
+.receiver select, .receiver input[type='range'] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Custom styling for select dropdowns */
+.receiver select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23bb86fc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    padding-right: 40px;
+}
+
+/* Styles for slider labels */
+.receiver .slider-label {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Custom styling for range input (slider) */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #333;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+/* Hover effect for range input */
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+/* Styling for range input thumb (slider handle) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* Styles for warning messages */
+.warning {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+/* Styles for the home button */
+.home-button {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 15px 20px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for home button */
+.home-button:hover {
+    background-color: #cf96fc;
+}
+
+/* Styles for the response message container */
+#response-message {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: none;
+}
+
+/* Success state for response message */
+#response-message.success {
+    border: 2px solid var(--secondary-color);
+}
+
+/* Error state for response message */
+#response-message.error {
+    border: 2px solid var(--error-color);
+}
+
+/* Styles for receiver error state */
+.receiver.error {
+    border: 2px solid var(--error-color);
+    padding: 15px;
+}
+
+.receiver .error-message {
+    color: var(--error-color);
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Styles for global error message */
+.global-error {
+    background-color: var(--error-color);
+    color: var(--bg-color);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Updated styles for the remote control */
+.remote-container {
+    background-color: #1a202c;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25);
+    max-width: 24rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.remote-container h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    font-size: 1.3rem;
+}
+
+#transmitter-select {
+    margin-bottom: 1.25rem;
+}
+
+#transmitter-select select {
+    width: 100%;
+    padding: 0.4rem;
+    background-color: #374151;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.remote {
+    background-color: #2d3748;
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+}
+
+.navigation-pad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.nav-row {
+    display: flex;
+    gap: 0.85rem;
+    margin: 0.4rem 0;
+}
+
+.number-pad {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.85rem;
+}
+
+.remote button {
+    color: #ffffff;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Specific button colors */
+.remote button[onclick*="power"],
+.remote button[onclick*="guide"] {
+    background-color: #9333ea;
+}
+
+.remote button[onclick*="up"],
+.remote button[onclick*="down"],
+.remote button[onclick*="left"],
+.remote button[onclick*="right"],
+.remote button[onclick*="select"] {
+    background-color: #2563eb;
+}
+
+.remote button[onclick*="channel_up"],
+.remote button[onclick*="channel_down"] {
+    background-color: #dc2626;
+}
+
+.remote button[onclick*="1"],
+.remote button[onclick*="2"],
+.remote button[onclick*="3"],
+.remote button[onclick*="4"],
+.remote button[onclick*="5"],
+.remote button[onclick*="6"],
+.remote button[onclick*="7"],
+.remote button[onclick*="8"],
+.remote button[onclick*="9"],
+.remote button[onclick*="0"] {
+    background-color: #2563eb;
+}
+
+.remote button[onclick*="last"],
+.remote button[onclick*="exit"] {
+    background-color: #059669;
+}
+
+/* Button hover effects */
+.remote button:hover {
+    opacity: 0.75;
+}
+
+/* Adjustments for specific buttons */
+.remote button[onclick*="up"],
+.remote button[onclick*="down"] {
+    width: 33%;
+}
+
+.remote .nav-row button {
+    width: 33%;
+}
+
+#error-message {
+    background-color: #7f1d1d;
+    border: 1px solid #991b1b;
+    color: #fecaca;
+    padding: 0.85rem;
+    border-radius: 0.4rem;
+    margin-top: 1.25rem;
+    display: none;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .receiver {
+        padding: 15px;
+    }
+
+    .home-button {
+        width: 80%;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    .remote-container {
+        padding: 1rem;
+    }
+
+    .remote {
+        padding: 1rem;
+    }
+
+    .remote button {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.8rem;
+    }
+}

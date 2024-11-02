@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowling Bar AV Controls</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="logo.png" alt="Castle AV Controls Logo" class="logo">
+    </div>
+
+    <h1>Bowling Bar AV Controls</h1>
+
+    <div class="top-buttons">
+        <a href="<?php echo HOME_URL; ?>" class="button home-button">Home</a>
+        <button id="power-all-on" class="button">Power All On</button>
+        <button id="power-all-off" class="button">Power All Off</button>
+    </div>
+
+    <div id="response-message"></div>
+
+    <div class="receivers-wrapper">
+        <?php echo generateReceiverForms(); ?>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+Details,/details,GET,Read-only parameters about the device's live status
+Details,/details/audio,GET,Audio-related details
+Details,/details/audio/hdmi,GET,HDMI audio details
+Details,/details/audio/stereo,GET,Stereo audio details
+Details,/details/audio/stereo/delay,GET,Stereo audio delay information
+Details,/details/audio/stereo/volume,GET,Stereo audio volume information
+Details,/details/channel,GET,Channel information
+Details,/details/device,GET,Device-specific details
+Details,/details/device/firmware,GET,Firmware information
+Details,/details/device/firmware/date,GET,Firmware date
+Details,/details/device/firmware/update,GET,Firmware update information
+Details,/details/device/firmware/update/eta,GET,Estimated time for firmware update
+Details,/details/device/firmware/update/message,GET,Firmware update message
+Details,/details/device/firmware/update/progress,GET,Firmware update progress
+Details,/details/device/firmware/update/result,GET,Firmware update result
+Details,/details/device/firmware/update/status,GET,Firmware update status
+Details,/details/device/firmware/version,GET,Current firmware version
+Details,/details/device/model,GET,Device model information
+Details,/details/device/network,GET,Network-related details
+Details,/details/device/network/ipaddress,GET,Device IP address
+Details,/details/device/network/mac,GET,Device MAC address
+Details,/details/device/network/mtu,GET,Network MTU
+Details,/details/device/network/netmask,GET,Network netmask
+Details,/details/device/network/speed,GET,Network speed
+Details,/details/device/status,GET,Device status
+Details,/details/device/time,GET,Device time
+Details,/details/device/uptime,GET,Device uptime
+Details,/details/edid,GET,EDID information
+Details,/details/edid/bytes,GET,EDID bytes
+Details,/details/imagepull,GET,Image pull details
+Details,/details/system,GET,System-related details
+Details,/details/system/rx,GET,Receiver system details
+Details,/details/system/tx,GET,Transmitter system details
+Details,/details/video,GET,Video-related details
+Details,/details/video/hdcp,GET,HDCP status
+Details,/details/video/hdr,GET,HDR status
+Details,/details/video/resolution,GET,Video resolution
+Details,/details/video/scaler,GET,Video scaler information
+Details,/details/videowall,GET,Video wall configuration details
+Details,/details/videowall/layout,GET,Video wall layout information
+Settings,/settings/audio,GET/POST,Audio settings
+Settings,/settings/audio/dsp,GET/POST,Audio DSP settings
+Settings,/settings/audio/dsp/hdmi,GET/POST,HDMI audio DSP settings
+Settings,/settings/audio/dsp/line,GET/POST,Line audio DSP settings
+Settings,/settings/audio/dsp/mic,GET/POST,Microphone audio DSP settings
+Settings,/settings/audio/stereo,GET/POST,Stereo audio settings
+Settings,/settings/audio/stereo/delay,GET/POST,Stereo audio delay settings
+Settings,/settings/audio/stereo/volume,GET/POST,Stereo audio volume settings
+Settings,/settings/audio/stream,GET/POST,Audio stream settings
+Settings,/settings/audio/stream/enabled,GET/POST,Audio stream enable/disable
+Settings,/settings/audio/stream/forced,GET/POST,Forced audio stream settings
+Settings,/settings/device,GET/POST,Device settings
+Settings,/settings/device/id,GET/POST,Device ID settings
+Settings,/settings/device/leds,GET/POST,Device LED settings
+Settings,/settings/device/name,GET/POST,Device name settings
+Settings,/settings/device/network,GET/POST,Network settings
+Settings,/settings/device/network/dns,GET/POST,DNS settings
+Settings,/settings/device/network/gateway,GET/POST,Gateway settings
+Settings,/settings/device/network/ipaddress,GET/POST,IP address settings
+Settings,/settings/device/network/mode,GET/POST,Network mode settings
+Settings,/settings/device/network/multicast,GET/POST,Multicast settings
+Settings,/settings/device/network/netmask,GET/POST,Netmask settings
+Settings,/settings/device/network/timeserver,GET/POST,Time server settings
+Settings,/settings/device/powersave,GET/POST,Power save settings
+Settings,/settings/device/powersave/enabled,GET/POST,Power save enable/disable
+Settings,/settings/device/powersave/timeout,GET/POST,Power save timeout settings
+Settings,/settings/flux,GET/POST,Flux-related settings
+Settings,/settings/imagepull,GET/POST,Image pull settings
+Settings,/settings/serial,GET/POST,Serial communication settings
+Settings,/settings/serial/mode,GET/POST,Serial mode settings
+Settings,/settings/serial/speed,GET/POST,Serial speed settings
+Settings,/settings/serial/speed/baud,GET/POST,Serial baud rate settings
+Settings,/settings/serial/speed/databits,GET/POST,Serial data bits settings
+Settings,/settings/serial/speed/parity,GET/POST,Serial parity settings
+Settings,/settings/serial/speed/stopbits,GET/POST,Serial stop bits settings
+Settings,/settings/switchplease,GET/POST,Switch-related settings
+Settings,/settings/usb,GET/POST,USB settings
+Settings,/settings/usb/enabled,GET/POST,USB enable/disable settings
+Settings,/settings/usb/touchscreen,GET/POST,USB touchscreen settings
+Settings,/settings/video,GET/POST,Video settings
+Settings,/settings/video/codec,GET/POST,Video codec settings
+Settings,/settings/video/hdcp,GET/POST,HDCP settings
+Settings,/settings/video/hdcp/always1x,GET/POST,HDCP 1.x settings
+Settings,/settings/video/hdcp/always22,GET/POST,HDCP 2.2 settings
+Settings,/settings/video/hdcp/reject,GET/POST,HDCP rejection settings
+Settings,/settings/video/hdr,GET/POST,HDR settings
+Settings,/settings/video/scaler,GET/POST,Video scaler settings
+Settings,/settings/video/stream,GET/POST,Video stream settings
+Settings,/settings/video/stream/enabled,GET/POST,Video stream enable/disable
+Settings,/settings/video/stream/maxbandwidth,GET/POST,Video stream max bandwidth settings
+Settings,/settings/videowall,GET/POST,Video wall settings
+Settings,/settings/videowall/bezel,GET/POST,Video wall bezel settings
+Settings,/settings/videowall/layout,GET/POST,Video wall layout settings
+Settings,/settings/videowall/rotate,GET/POST,Video wall rotation settings
+Settings,/settings/videowall/rotate/clockwise,GET/POST,Video wall clockwise rotation settings
+Settings,/settings/videowall/rotate/mirror,GET/POST,Video wall mirror settings
+Settings,/settings/videowall/shift,GET/POST,Video wall shift settings
+Settings,/settings/videowall/shift/horizontal,GET/POST,Video wall horizontal shift settings
+Settings,/settings/videowall/shift/vertical,GET/POST,Video wall vertical shift settings
+Settings,/settings/videowall/zoom,GET/POST,Video wall zoom settings
+Settings,/settings/videowall/zoom/horizontal,GET/POST,Video wall horizontal zoom settings
+Settings,/settings/videowall/zoom/vertical,GET/POST,Video wall vertical zoom settings
+Command,/command/audio/dsp,POST,Audio DSP commands
+Command,/command/audio/dsp/hdmi,POST,HDMI audio DSP commands
+Command,/command/audio/dsp/line,POST,Line audio DSP commands
+Command,/command/audio/dsp/mic,POST,Microphone audio DSP commands
+Command,/command/audio/stereo/delay,POST,Stereo audio delay commands
+Command,/command/audio/stereo/volume,POST,Stereo audio volume commands
+Command,/command/cec/bytes,POST,CEC byte commands
+Command,/command/cec/tv,POST,CEC TV commands
+Command,/command/channel,POST,Channel-related commands
+Command,/command/cli,POST,CLI commands
+Command,/command/device,POST,Device-related commands
+Command,/command/edid,POST,EDID-related commands
+Command,/command/edid/custom,POST,Custom EDID commands
+Command,/command/edid/default,POST,Default EDID commands
+Command,/command/flux,POST,Flux-related commands
+Command,/command/imagepull,POST,Image pull commands
+Command,/command/osd,POST,On-screen display commands
+Command,/command/ppp,POST,PPP-related commands
+Command,/command/serial/ascii,POST,ASCII serial commands
+Command,/command/serial/hex,POST,Hexadecimal serial commands
+Command,/command/switch,POST,Switch-related commands
+Command,/command/tiler/fade,POST,Tiler fade commands
+Command,/command/tiler/layer,POST,Tiler layer commands
+Command,/command/tiler/layout,POST,Tiler layout commands
+Command,/command/tiler/pop,POST,Tiler pop commands
+Command,/command/video,POST,Video-related commands
+Command,/command/videowall/bezel,POST,Video wall bezel commands
+Command,/command/videowall/layout,POST,Video wall layout commands
+Command,/command/videowall/rotate/clockwise,POST,Video wall clockwise rotation commands
+Command,/command/videowall/rotate/mirror,POST,Video wall mirror commands
+Command,/command/videowall/shift/horizontal,POST,Video wall horizontal shift commands
+Command,/command/videowall/shift/vertical,POST,Video wall vertical shift commands
+Command,/command/videowall/zoom/horizontal,POST,Video wall horizontal zoom commands
+Command,/command/videowall/zoom/vertical,POST,Video wall vertical zoom commands 

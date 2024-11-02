@@ -1,0 +1,190 @@
+/* Base styles */
+html {
+    font-size: 14px; /* Reduced from default 16px */
+}
+
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: #1a202c;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.container {
+    width: 100%;
+    max-width: 24rem; /* Reduced from 28rem */
+    margin: 1.5rem auto; /* Reduced from 2rem */
+    padding: 1.5rem; /* Reduced from 2rem */
+    background-color: #1f2937;
+    border-radius: 1.25rem; /* Slightly reduced */
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+/* Header styles */
+h1 {
+    font-size: 1.3rem; /* Reduced from 1.5rem */
+    line-height: 1.75rem; /* Reduced from 2rem */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.25rem; /* Reduced from 1.5rem */
+    color: #ffffff;
+}
+
+/* Transmitter select styles */
+#transmitter-select {
+    margin-bottom: 1.25rem; /* Reduced from 1.5rem */
+}
+
+#transmitter-select select {
+    width: 100%;
+    padding: 0.4rem; /* Reduced from 0.5rem */
+    background-color: #374151;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.3rem; /* Reduced from 0.375rem */
+}
+
+/* Remote container styles */
+.remote-container {
+    background-color: #2d3748;
+    border-radius: 1.25rem; /* Reduced from 1.5rem */
+    padding: 1.25rem; /* Reduced from 1.5rem */
+}
+
+/* Button row styles */
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.85rem; /* Reduced from 1rem */
+    margin-bottom: 1.25rem; /* Reduced from 1.5rem */
+}
+
+/* Navigation pad styles */
+.navigation-pad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.25rem; /* Reduced from 1.5rem */
+}
+
+.nav-row {
+    display: flex;
+    gap: 0.85rem; /* Reduced from 1rem */
+    margin: 0.4rem 0; /* Reduced from 0.5rem */
+}
+
+/* Number pad styles */
+.number-pad {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.85rem; /* Reduced from 1rem */
+}
+
+/* Button styles */
+button {
+    color: #ffffff;
+    border: none;
+    border-radius: 0.4rem; /* Reduced from 0.5rem */
+    padding: 0.6rem 0.85rem; /* Reduced from 0.75rem 1rem */
+    font-size: 0.9rem; /* Reduced from 1rem */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    height: 2.5rem; /* Reduced from 3rem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Specific button colors - corrected to match original */
+button[onclick="sendCommand('power')"],
+button[onclick="sendCommand('guide')"] {
+    background-color: #9333ea;
+}
+
+button[onclick="sendCommand('up')"],
+button[onclick="sendCommand('down')"],
+button[onclick="sendCommand('left')"],
+button[onclick="sendCommand('right')"],
+button[onclick="sendCommand('select')"] {
+    background-color: #2563eb;
+}
+
+button[onclick="sendCommand('channel_up')"],
+button[onclick="sendCommand('channel_down')"] {
+    background-color: #dc2626;
+}
+
+button[onclick="sendCommand('1')"],
+button[onclick="sendCommand('2')"],
+button[onclick="sendCommand('3')"],
+button[onclick="sendCommand('4')"],
+button[onclick="sendCommand('5')"],
+button[onclick="sendCommand('6')"],
+button[onclick="sendCommand('7')"],
+button[onclick="sendCommand('8')"],
+button[onclick="sendCommand('9')"],
+button[onclick="sendCommand('0')"] {
+    background-color: #2563eb;
+}
+
+button[onclick="sendCommand('last')"],
+button[onclick="sendCommand('exit')"] {
+    background-color: #059669;
+}
+
+/* Button hover effects */
+button:hover {
+    opacity: 0.75;
+}
+
+/* Adjustments for specific buttons */
+button[onclick="sendCommand('up')"],
+button[onclick="sendCommand('down')"] {
+    width: 33%;
+}
+
+.nav-row button {
+    width: 33%;
+}
+
+/* Home button styles */
+.home-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem; /* Reduced from 1.5rem */
+}
+
+.home-button {
+    background-color: #3182ce;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.4rem; /* Reduced from 0.5rem */
+    padding: 0.6rem 1.25rem; /* Reduced from 0.75rem 1.5rem */
+    font-size: 0.9rem; /* Reduced from 1rem */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-button:hover {
+    opacity: 0.75;
+}
+
+/* Error message styles */
+.error-message {
+    background-color: #7f1d1d;
+    border: 1px solid #991b1b;
+    color: #fecaca;
+    padding: 0.85rem; /* Reduced from 1rem */
+    border-radius: 0.4rem; /* Reduced from 0.5rem */
+    margin-top: 1.25rem; /* Reduced from 1.5rem */
+    display: none;
+}

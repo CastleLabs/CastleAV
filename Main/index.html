@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castle AV Controls</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .centered-content {
+            text-align: center;
+            background-color: #1e1e1e;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            max-width: 90%;
+            width: 400px;
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 1rem;
+            filter: brightness(0.8) contrast(1.2);
+        }
+        h1 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .button {
+            display: block;
+            padding: 0.5rem 1rem;
+            background-color: #00C853;  /* Bright green */
+            color: #000000;  /* Black text for contrast */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #00E676;  /* Lighter green on hover */
+        }
+        #passwordDialog {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #passwordForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+        }
+        #passwordInput {
+            padding: 0.5rem;
+            border: 1px solid #00C853;  /* Green border */
+            border-radius: 4px;
+            width: 80%;
+            max-width: 300px;
+            background-color: #2c2c2c;
+            color: #ffffff;
+        }
+        #submitPassword {
+            padding: 0.5rem 1rem;
+            background-color: #00C853;  /* Green submit button */
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        #submitPassword:hover {
+            background-color: #00E676;  /* Lighter green on hover */
+        }
+        #errorMessage {
+            color: #CF6679;
+            margin-top: 0.5rem;
+        }
+        h5 {
+            color: #00C853;  /* Green heading */
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-content">
+        <div id="passwordDialog">
+            <div id="passwordForm">
+                <img src="logo.png" alt="Castle AV Controls Logo" class="logo">
+                <h5>Enter Password to Access Castle AV Controls</h5>
+                <input type="password" id="passwordInput">
+                <button id="submitPassword">Submit</button>
+                <p id="errorMessage"></p>
+            </div>
+        </div>
+
+        <div class="container" style="display: none;">
+            <img src="logo.png" alt="Castle AV Controls Logo" class="logo">
+            <h1>Castle AV Controls</h1>
+            <div class="button-grid">
+                <a href="/bowling" class="button">Bowling</a>
+                <a href="/rink" class="button">Rink</a>
+                <a href="/jesters" class="button">Jesters</a>
+                <a href="/bowlingbar" class="button">Bowling Bar</a>
+                <a href="/remotes" class="button">Remotes</a>
+                <a href="/devices" class="button">Devices</a>
+                <a href="/osd" class="button">OSD</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
